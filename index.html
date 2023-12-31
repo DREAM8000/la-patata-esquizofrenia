@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Patata Adivina-Futuro</title>
+</head>
+<body>
+
+<script>
+    setTimeout(function() {
+        document.getElementById('loading').style.display = 'none';
+        document.getElementById('content').style.display = 'block';
+    }, 5000);
+</script>
+
+<div id="loading">
+    <h1>De DREAM E.</h1>
+    <p>Una idea de un usuario...</p>
+</div>
+
+<div id="content" style="display: none;">
+    <div class="container">
+        <div class="presentation">
+            <div class="patata" id="patata" onclick="enviarPregunta()"></div>
+            <div class="cable"></div>
+            <div class="cable"></div>
+            <div class="cable"></div>
+            <div class="cable"></div>
+            <p>¡Agita o toca para hacerme preguntas!</p>
+        </div>
+        <div class="question-container">
+            <input type="text" id="questionInput" placeholder="Hazme una pregunta...">
+            <button onclick="enviarPregunta()">Enviar</button>
+        </div>
+        <div class="answer" id="answer"></div>
+    </div>
+
+    <button onclick="mostrarCreditos()">Créditos</button>
+
+    <div id="creditos" class="credits-container" style="display: none;">
+        <p>Creador y programador: DREAM E.</p>
+        <p>El man que tuvo la idea: Un usuario :)</p>
+        <p>Sponsor: bob toronja y putricio estrella :)</p>
+    </div>
+
+    <button onclick="modoOscuro()">Modo Oscuro</button>
+
+    <script src="script.js"></script>
+</div>
+
+</body>
+</html>
